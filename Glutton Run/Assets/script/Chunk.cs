@@ -25,9 +25,12 @@ public class Chunk : MonoBehaviour
             Instantiate(prefabWall, position, Quaternion.identity);
      
         }
-        
 
+       
     }
 
    
 }
+
+   
+

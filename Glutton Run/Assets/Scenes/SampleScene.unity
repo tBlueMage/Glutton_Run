@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: {x: 0, y: 0, z: 0}
-  jumpForce: 2
+  jumpForce: 10
 --- !u!1 &1215887984
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +378,11 @@ PrefabInstance:
     - target: {fileID: 1342530373013524467, guid: e0e5549b87299e442b8b38ccbcb9f32d,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342530373013524467, guid: e0e5549b87299e442b8b38ccbcb9f32d,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3174208248217815652, guid: e0e5549b87299e442b8b38ccbcb9f32d,
@@ -449,6 +454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575989907536733481, guid: e0e5549b87299e442b8b38ccbcb9f32d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e5549b87299e442b8b38ccbcb9f32d, type: 3}

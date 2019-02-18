@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrickWall : MonoBehaviour
 {
-    public GameObject Icecream;
+    public GameObject brickWall;
 
     void Start()
     {
@@ -23,7 +23,8 @@ public class BrickWall : MonoBehaviour
         if (Random.Range(0, 600) < 50)
         {
             Vector3 position = transform.Find(name).position;
-            Instantiate(Icecream, position, Quaternion.identity);
+            Instantiate(brickWall, position, Quaternion.identity);
         }
     }
+   
 }

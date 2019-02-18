@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class musclepowder : MonoBehaviour
+public class steelWall : MonoBehaviour
 {
-    public GameObject Icecream;
+    public GameObject steelwall;
 
     void Start()
     {
 
 
 
-        SpawnWallAt("spawn7");
-        SpawnWallAt("spawn8");
-        SpawnWallAt("spawn9");
+        SpawnWallAt("spawn16");
+        SpawnWallAt("spawn17");
+        SpawnWallAt("spawn18");
 
 
     }
@@ -23,8 +23,8 @@ public class musclepowder : MonoBehaviour
         if (Random.Range(0, 800) < 50)
         {
             Vector3 position = transform.Find(name).position;
-            Instantiate(Icecream, position, Quaternion.identity);
+            Instantiate(steelwall, position, Quaternion.identity);
         }
     }
-
+   
 }

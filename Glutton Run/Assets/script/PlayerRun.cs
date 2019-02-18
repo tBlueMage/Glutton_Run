@@ -27,6 +27,15 @@ public class PlayerRun : MonoBehaviour
             {
                 rb.velocity = Vector3.up * jumpForce;
             }
+            if (Input.GetButtonDown("d"))
+            {
+                rb.velocity = Vector3.right * speed;
+            }
+            if (Input.GetButtonDown("a"))
+            {
+                rb.velocity = Vector3.left * speed;
+            }
+
         }
 
         Vector3 pos = transform.position;

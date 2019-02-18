@@ -11,20 +11,22 @@ public class junkFood : MonoBehaviour
 
 
 
-    SpawnWallAt("spawn4");
-    SpawnWallAt("spawn5");
-    SpawnWallAt("spawn6");
+        SpawnWallAt("spawn4");
+        SpawnWallAt("spawn5");
+        SpawnWallAt("spawn6");
 
 
-}
-
-private void SpawnWallAt(string name)
-{
-    if (Random.Range(0, 200) < 50)
-    {
-        Vector3 position = transform.Find(name).position;
-        Instantiate(Icecream, position, Quaternion.identity);
     }
-}
-}
 
+    private void SpawnWallAt(string name)
+    {
+        if (Random.Range(0, 200) < 50)
+        {
+            Vector3 position = transform.Find(name).position;
+            Instantiate(Icecream, position, Quaternion.identity);
+        }
+    }
+
+
+
+}
