@@ -7,9 +7,12 @@ public class GameControllerScript : MonoBehaviour
 {
     public GameObject prefabChunk;
     public GameObject player;
+    public PlayerScript playerScript;
     public Transform playerTransform;
     public Text scoreText;
+    public Text fartText;
     public GameObject indicator;
+    private int colorCountdown = 30;
 
 
     List<GameObject> chunks = new List<GameObject>();
@@ -45,6 +48,30 @@ public class GameControllerScript : MonoBehaviour
 
         setScoreText();
 
+        if(playerScript.fartReady)
+        {
+            if (colorCountdown < 0)
+            {
+                float randoR = Random.Range(0.0f, 1.0f);
+                float randoG = Random.Range(0.0f, 1.0f);
+                float randoB = Random.Range(0.0f, 1.0f);
+
+                Color randoColor = new Color(randoR, randoG, randoB);
+
+                fartText.color = randoColor;
+
+                colorCountdown = 30;
+            }
+            else
+            {
+                colorCountdown--;
+            }
+            fartText.text = "Fart Ready";
+        }
+        else
+        {
+            fartText.text = "";
+        }
   
     }
 

@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public int speed;
     public int score;
     public int fat;
+    public float fart;
+    public bool fartReady = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,15 @@ public class PlayerScript : MonoBehaviour
          
 
         fat += (speed * 1);
+
+        if (fart < 1)
+        {
+            fart += .001f;
+        }
+        else
+        {
+            fartReady = true;
+        }
 
         Vector3 movement = new Vector3(0, 0, 1);
 
