@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class GameControllerScript : MonoBehaviour
     public GameObject player;
     public Transform playerTransform;
     public Text scoreText;
+    public GameObject indicator;
 
 
     List<GameObject> chunks = new List<GameObject>();
@@ -41,13 +43,15 @@ public class GameControllerScript : MonoBehaviour
             chunks.Add(obj);
         }
 
+        setScoreText();
 
+  
     }
 
     void setScoreText()
     {
         int score = player.GetComponent<PlayerScript>().score;
-        scoreText.text = "Score:" + score;
+        scoreText.text = "Distance: " + score;
     }
 
 }

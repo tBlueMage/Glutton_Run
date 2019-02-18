@@ -6,10 +6,10 @@ public class PlayerScript : MonoBehaviour
 {
 
     private Rigidbody rb;
-
     public int speed;
-
     public int score;
+    public float fat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +24,13 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
+         
+
+        fat += (speed * .1f);
+
         Vector3 movement = new Vector3(0, 0, 1);
 
         transform.position += (movement * speed);
-        //rb.AddForce(movement * speed);
 
         score += speed;
     }
