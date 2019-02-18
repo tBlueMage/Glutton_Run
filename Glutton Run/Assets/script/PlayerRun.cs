@@ -14,14 +14,17 @@ public class PlayerRun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.IgnoreLayerCollision(0, 9, true);
+
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+      
 
-        if(isGrounded)
+        if (isGrounded)
         {
             if(Input.GetButtonDown("Jump"))
             {
@@ -41,5 +44,10 @@ public class PlayerRun : MonoBehaviour
         Vector3 pos = transform.position;
         pos.z += speed * Time.deltaTime;
         transform.position = pos;
+
+
+
     }
+
+
 }
