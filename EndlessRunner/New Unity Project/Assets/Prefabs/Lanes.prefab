@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238f115d42838cc48baf35df3e389580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabWall: {fileID: 1768173399290300303, guid: 7b4dca6ee4d61ba47bb6d8cdf54037eb,
+  prefabWall: {fileID: 9050241887197625500, guid: 42ea857204eb48d4091e0e81b7cb34fe,
     type: 3}
 --- !u!114 &6003445061001333084
 MonoBehaviour:

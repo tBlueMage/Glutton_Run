@@ -21,7 +21,9 @@ public class foodDestroyed : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("hit");
-            isDead = true;
+            
         }
+
+       
     }
 }

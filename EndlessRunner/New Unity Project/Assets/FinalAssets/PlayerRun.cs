@@ -12,6 +12,10 @@ public class PlayerRun : MonoBehaviour
     private float attackRange = 3f;
     private bool isGrounded = true;
     private bool hasPressed = false;
+    public int score;
+    public int fat;
+    public float fart;
+    public bool fartReady = false;
 
     Rigidbody rb;
     // Start is called before the first frame update
@@ -72,9 +76,25 @@ public class PlayerRun : MonoBehaviour
     void Attack()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
         {
             Debug.Log(hit.transform.name);
         }
+    }
+    void FixedUpdate()
+    {
+
+
+
+
+        if (fart < 1)
+        {
+            fart += .001f;
+        }
+        else
+        {
+            fartReady = true;
+        }
+
     }
 }

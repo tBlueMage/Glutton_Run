@@ -8,24 +8,25 @@ public class Chunk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ColliderAABB collider = GetComponent<ColliderAABB>();
-
-        /*
-        CollisionManager.walls.Add(collider);
 
 
-        SpawnWallAt("Spawn1");
-        SpawnWallAt("Spawn2");
-        SpawnWallAt("Spawn3");
-        */
+
+        SpawnWallAt("spawn1");
+        SpawnWallAt("spawn2");
+        SpawnWallAt("spawn3");
+
     }
 
     private void SpawnWallAt(string name)
     {
-        if(Random.Range(0, 100) < 50)
+        if (Random.Range(0, 400) < 50)
         {
             Vector3 position = transform.Find(name).position;
             Instantiate(prefabWall, position, Quaternion.identity);
+
         }
+
+
     }
+
 }
