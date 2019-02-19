@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FartMeterScript : MonoBehaviour
 {
-    public PlayerScript player;
+    public PlayerRun player;
 
     // Start is called before the first frame update
     void Start()

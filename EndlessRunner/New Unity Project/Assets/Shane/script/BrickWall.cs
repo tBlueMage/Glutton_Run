@@ -8,14 +8,9 @@ public class BrickWall : MonoBehaviour
 
     void Start()
     {
-
-
-
         SpawnWallAt("spawn16");
         SpawnWallAt("spawn17");
         SpawnWallAt("spawn18");
-
-
     }
 
     private void SpawnWallAt(string name)

@@ -7,8 +7,9 @@ public class ModelSwitch : MonoBehaviour
     public GameObject strongRunning;
     public GameObject fatRunning;
     public GameObject skinnyRunning;
+    public PlayerRun playerScript;
 
-    private int modelNumber;
+    public static int modelNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -20,23 +21,29 @@ public class ModelSwitch : MonoBehaviour
 
     void ModelChange()
     {
-        if(modelNumber == 1)
+        if (PlayerRun.fat > 0 && PlayerRun.fat < 600)
         {
             fatRunning.SetActive(false);
             skinnyRunning.SetActive(true);
             modelNumber = 2;
+            playerScript.speed = 4;
+            //print("Model 2 : Muscle");
         }
-        else if(modelNumber == 2)
+        else if (PlayerRun.fat > 0)
         {
             skinnyRunning.SetActive(false);
             strongRunning.SetActive(true);
             modelNumber = 3;
+            playerScript.speed = 5;
+           // print("Model 3 : Lean");
         }
-        else if(modelNumber == 3)
+        else
         {
             strongRunning.SetActive(false);
             fatRunning.SetActive(true);
             modelNumber = 1;
+            playerScript.speed = 2;
+           // print("Model 1 : Fat");
         }
     }
 
@@ -45,8 +52,15 @@ public class ModelSwitch : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            ModelChange();
-            print("Working?");
+            PlayerRun.fat -= 500;
+
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            PlayerRun.fat += 500;
+        }
+        
+        ModelChange();
     }
 }
