@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2617378739799024393}
   m_Layer: 0
   m_Name: muscle powder
-  m_TagString: Untagged
+  m_TagString: musclePowder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2e0ac40f3d9804da9c8d27531a62f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 0}
+  collidingMesh: {fileID: 0}
 --- !u!65 &6481011351522410008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a4c2cafca665a42a19af4e536984d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 0}
 --- !u!1 &8588768571934722490
 GameObject:
   m_ObjectHideFlags: 0

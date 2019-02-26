@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 4666632585110545421}
   m_Layer: 0
   m_Name: apple3
-  m_TagString: Untagged
+  m_TagString: apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,3 +369,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2e0ac40f3d9804da9c8d27531a62f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collidingMesh: {fileID: 9050241887197625500}

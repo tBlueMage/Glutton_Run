@@ -6,11 +6,15 @@ public class PlayerRun : MonoBehaviour
 {
 
     public int speed;
+    public float sideSpeed;
     public float exponentialSpeed;
     public Vector3 jump;
     public float jumpForce;
     public float shuffleMovement;
+    private float pointOfTravel;
+    private float travel;
     private float position;
+    public float speedScale;
     private float attackRange = 3f;
     private bool isGrounded = true;
     private bool hasPressed = false;
@@ -23,6 +27,7 @@ public class PlayerRun : MonoBehaviour
 
 
     Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +53,28 @@ public class PlayerRun : MonoBehaviour
         }
         */
 
+        Movement();
+        FatCalculation();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+            //print("Collision");
+        }
+    }
+    void Attack()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        {
+            Debug.Log(hit.transform.name);
+        }
+    }
+    void Movement()
+    {
         float moveVertical = Input.GetAxis("Vertical");
         if (isGrounded)
         {
@@ -60,14 +87,21 @@ public class PlayerRun : MonoBehaviour
 
         if (hasPressed == false)
         {
-            if (Input.GetKeyDown("a"))
+            if (Input.GetKeyDown("a") && pointOfTravel != -1)
             {
-                transform.position += new Vector3(-shuffleMovement, 0, 0);
+                pointOfTravel -= shuffleMovement;
             }
-            if (Input.GetKeyDown("d"))
+            if (Input.GetKeyDown("d") && pointOfTravel != 1)
             {
-                transform.position += new Vector3(shuffleMovement, 0, 0);
+                pointOfTravel += shuffleMovement;
             }
+
+            speedScale = pointOfTravel - transform.position.x;
+
+            travel = (sideSpeed * speedScale);
+
+            transform.position += new Vector3(travel, 0, 0);
+
             if (Input.GetKeyDown("f") && fartReady == true)
             {
                 rb.velocity += Vector3.up * fartPower;
@@ -96,20 +130,21 @@ public class PlayerRun : MonoBehaviour
         {
             exponentialSpeed = 10;
         }
-        //print(exponentialSpeed);
-
+    }
+    void FatCalculation()
+    {
         fat += (speed / 2);
 
         if (fat > 1500)
         {
-            fat = 1500;  
+            fat = 1500;
         }
 
         if (fat < -900)
         {
             fat = -900;
         }
-        if(fart < 1)
+        if (fart < 1)
         {
             fart += .001f;
             fartReady = false;
@@ -117,28 +152,6 @@ public class PlayerRun : MonoBehaviour
         else
         {
             fartReady = true;
-        }
-        /*
-        Vector3 fartMeterMovement = new Vector3(0, 0, 1);
-        transform.position += (fartMeterMovement * speed);
-        */
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-            //print("Collision");
-        }
-    }
-
-    void Attack()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
-        {
-            Debug.Log(hit.transform.name);
         }
     }
 }
