@@ -18,6 +18,7 @@ public class PlayerRun : MonoBehaviour
     private float attackRange = 3f;
     private bool isGrounded = true;
     private bool hasPressed = false;
+    private bool fartPowerActive = false;
     public int fartPower;
     public int score = 0;
     public static int fat;
@@ -38,21 +39,6 @@ public class PlayerRun : MonoBehaviour
     void Update()
     {
         score += speed;
-        /*
-        if (ModelSwitch.modelNumber == 1)
-        {
-            speed = 2;
-        }
-        if (ModelSwitch.modelNumber == 2)
-        {
-            speed = 4;
-        }
-        if (ModelSwitch.modelNumber == 2)
-        {
-            speed = 5;
-        }
-        */
-
         Movement();
         FatCalculation();
     }
@@ -62,6 +48,7 @@ public class PlayerRun : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            fartPowerActive = false;
             //print("Collision");
         }
     }
@@ -107,7 +94,7 @@ public class PlayerRun : MonoBehaviour
                 rb.velocity += Vector3.up * fartPower;
                 rb.velocity += Vector3.forward * fartPower;
                 fart = 0;
-                fat = 0;
+                fartPowerActive = true;
             }
             hasPressed = true;
         }
@@ -133,7 +120,10 @@ public class PlayerRun : MonoBehaviour
     }
     void FatCalculation()
     {
-        fat += (speed / 2);
+        if(!fartPowerActive)
+        {
+            fat += (speed / 4);
+        }
 
         if (fat > 1500)
         {

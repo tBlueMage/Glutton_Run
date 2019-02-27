@@ -5,7 +5,6 @@ using UnityEngine;
 public class GoodFoodDestroyed : MonoBehaviour
 {
     private PlayerRun playerScript;
-    private bool isDead = false;
     private float counter = 10;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +35,6 @@ public class GoodFoodDestroyed : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("hit");
-            isDead = true;
             Destroy(gameObject);
             PlayerRun.fat -= 100;
         }
