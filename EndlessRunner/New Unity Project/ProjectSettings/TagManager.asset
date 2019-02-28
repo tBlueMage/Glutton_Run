@@ -7,6 +7,12 @@ TagManager:
   - Tag
   - Ground
   - ActualPlayer
+  - iceCream
+  - apple
+  - brickWall
+  - garbageBags
+  - musclePowder
+  - steelWall
   layers:
   - Default
   - TransparentFX
