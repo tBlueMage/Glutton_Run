@@ -87,9 +87,9 @@ MonoBehaviour:
     type: 3}
   iceCream: {fileID: 1698779595950636376, guid: 99932f9b32193de408dadc703bcf7a7b,
     type: 3}
-  musclePowder: {fileID: 8588768571934722488, guid: 2682991e9bcbabf40ac12d63236ef78b,
+  musclePowder: {fileID: 570574757193066393, guid: 0ba9c3690679784469d578bbcf0bdfab,
     type: 3}
-  steelWall: {fileID: 1329423605129453354, guid: eaa419a83077f0c4d897bb4b3e748ad4,
+  steelWall: {fileID: 2912353851069940038, guid: 2182a2d39e4ebbd468770da938bc250b,
     type: 3}
 --- !u!1 &3503714068798309624
 GameObject:

@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 122000283402194563}
   - component: {fileID: 71532036472482540}
   - component: {fileID: 4666632585110545421}
+  - component: {fileID: 9169313529296697650}
   m_Layer: 0
   m_Name: apple3
   m_TagString: apple
@@ -370,3 +371,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidingMesh: {fileID: 9050241887197625500}
+--- !u!114 &9169313529296697650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9050241887197625500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f3aa75210d0d44188938d8278c5d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 40
+  amplitude: 0.1
+  frequency: 1

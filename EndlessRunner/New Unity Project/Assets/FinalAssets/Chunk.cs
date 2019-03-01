@@ -11,24 +11,25 @@ public class Chunk : MonoBehaviour
     public GameObject musclePowder;
     public GameObject steelWall;
     private int lane;
+    private float wallOffset = 0;
     private int objectProbability;
 
     // Start is called before the first frame update
     void Start()
     {
-        lane = Random.Range(1, 3);
+        lane = Random.Range(1, 4);
 
         if(lane == 1)
         {
             SpawnObjectAt("spawn1");
         }
 
-        if (lane == 2)
+       else if (lane == 2)
         {
             SpawnObjectAt("spawn2");
         }
 
-        if (lane == 3)
+        else if (lane == 3)
         {
             SpawnObjectAt("spawn3");
         }
@@ -55,16 +56,19 @@ public class Chunk : MonoBehaviour
         if (objectProbability > 50 && objectProbability <= 70)
         {
             Vector3 position = transform.Find(name).position;
+            position.y += .25f;
             Instantiate(iceCream, position, Quaternion.identity);
         }
         if (objectProbability > 70 && objectProbability <= 80)
         {
             Vector3 position = transform.Find(name).position;
+            position.y += .25f;
             Instantiate(musclePowder, position, Quaternion.identity);
         }
         if (objectProbability > 80 && objectProbability <= 100)
         {
             Vector3 position = transform.Find(name).position;
+            position.y += .25f;
             Instantiate(apple, position, Quaternion.identity);
         }
 

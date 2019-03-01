@@ -59,6 +59,28 @@ public class ObjectDestroy : MonoBehaviour
                 playerRun.exponentialSpeed = 0;
                 Destroy(gameObject);
             }
+            if (tag == "musclePowder")
+            {
+                GameObject player = GameObject.Find("Player");
+                if(PlayerRun.fat > 300)
+                {
+                    PlayerRun.fat -= 800;
+                    if(PlayerRun.fat < 300)
+                    {
+                        PlayerRun.fat = 300;
+                    }
+                }
+                if (PlayerRun.fat < 300)
+                {
+                    PlayerRun.fat += 800;
+                    if (PlayerRun.fat > 300)
+                    {
+                        PlayerRun.fat = 300;
+                    }
+                }
+                //PlayerRun.fat;
+                Destroy(gameObject);
+            }
         }
     }
 }
