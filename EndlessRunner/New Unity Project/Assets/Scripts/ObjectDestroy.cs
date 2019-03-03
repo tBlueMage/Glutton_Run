@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectDestroy : MonoBehaviour
 {
     public GameObject collidingMesh;
-    private float counter = 10;
+    private float counter = 4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class ObjectDestroy : MonoBehaviour
 
         if(counter <= 0)
         {
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
         /*
         Screw this part in particular.
@@ -78,7 +78,6 @@ public class ObjectDestroy : MonoBehaviour
                         PlayerRun.fat = 300;
                     }
                 }
-                //PlayerRun.fat;
                 Destroy(gameObject);
             }
         }
