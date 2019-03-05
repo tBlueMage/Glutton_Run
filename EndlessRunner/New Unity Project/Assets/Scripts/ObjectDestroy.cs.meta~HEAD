@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:EndlessRunner/New Unity Project/Assets/Shane/script/foodDestroyed.cs.meta:EndlessRunner/New Unity Project/Assets/Shane/script/foodDestroyed.cs.meta
+guid: c623f22028479ba4d92d61a86d35bcbe
+=======
+guid: db2e0ac40f3d9804da9c8d27531a62f1
+>>>>>>> Tim2:EndlessRunner/New Unity Project/Assets/Scripts/ObjectDestroy.cs.meta:EndlessRunner/New Unity Project/Assets/Scripts/ObjectDestroy.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
