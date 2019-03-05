@@ -147,8 +147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759131976357034443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0, z: 5}
-  m_LocalScale: {x: 2, y: 0.3885, z: 9}
+  m_LocalPosition: {x: -2.71, y: 0, z: 5}
+  m_LocalScale: {x: 2.4, y: 0.3885, z: 9}
   m_Children: []
   m_Father: {fileID: 151555669207433765}
   m_RootOrder: 16
@@ -178,7 +178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09b5aa2db53a6c046b9e070059406de4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,7 +221,6 @@ GameObject:
   m_Component:
   - component: {fileID: 151555669207433765}
   - component: {fileID: 7923538468351449992}
-  - component: {fileID: 926768660658120029}
   m_Layer: 0
   m_Name: Lanes
   m_TagString: Ground
@@ -272,6 +271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238f115d42838cc48baf35df3e389580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  streetLight: {fileID: 5523599316657747934, guid: fd4e89b75139096469203c8a0c1f2a58,
+    type: 3}
+  building: {fileID: 3886629966917525690, guid: 53315b1f0a8737642b034068222d361e,
+    type: 3}
+  building2: {fileID: 8577009874969846670, guid: 030a766f84ed331438ead7abd92e0b4e,
+    type: 3}
   apple: {fileID: 9050241887197625500, guid: 42ea857204eb48d4091e0e81b7cb34fe, type: 3}
   brickWall: {fileID: 6121049458663488004, guid: f196139f69770a244ae1b5fd47500fa0,
     type: 3}
@@ -282,22 +287,6 @@ MonoBehaviour:
   musclePowder: {fileID: 570574757193066393, guid: 0ba9c3690679784469d578bbcf0bdfab,
     type: 3}
   steelWall: {fileID: 2912353851069940038, guid: 2182a2d39e4ebbd468770da938bc250b,
-    type: 3}
---- !u!114 &926768660658120029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850253182045503114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e7a40232c0f6146a68a1587ddc0423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  streetLight: {fileID: 5523599316657747934, guid: fd4e89b75139096469203c8a0c1f2a58,
-    type: 3}
-  building: {fileID: 3886629966917525690, guid: 53315b1f0a8737642b034068222d361e,
     type: 3}
 --- !u!1 &1884354343170126755
 GameObject:
@@ -537,7 +526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5914afbd4fd424a40aa48ceda5df5fbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -628,7 +617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5914afbd4fd424a40aa48ceda5df5fbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -688,8 +677,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5658561203495222066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0, z: 5}
-  m_LocalScale: {x: 2, y: 0.38849998, z: 9}
+  m_LocalPosition: {x: 2.73, y: 0, z: 5}
+  m_LocalScale: {x: 2.4, y: 0.38849998, z: 9}
   m_Children: []
   m_Father: {fileID: 151555669207433765}
   m_RootOrder: 15
@@ -719,7 +708,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09b5aa2db53a6c046b9e070059406de4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -870,7 +859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5914afbd4fd424a40aa48ceda5df5fbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

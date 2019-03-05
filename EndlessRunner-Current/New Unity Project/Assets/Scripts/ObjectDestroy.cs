@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectDestroy : MonoBehaviour
 {
     public GameObject collidingMesh;
-    private float counter = 4f;
+    private float counter = 6f;
     // Start is called before the first frame update
     void Start()
     {

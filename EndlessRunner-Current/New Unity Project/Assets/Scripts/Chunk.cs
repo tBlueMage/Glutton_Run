@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
+    public GameObject streetLight;
+    public GameObject building;
+    public GameObject building2;
     public GameObject apple;
     public GameObject brickWall;
     public GameObject garbageBags;
@@ -32,6 +35,12 @@ public class Chunk : MonoBehaviour
         {
             SpawnObjectAt("spawn3");
         }
+
+        SpawnStreetLightAt("streetLight RM");
+        SpawnStreetLightAt("streetLight LM");
+        SpawnBuildingAt("Building L");
+        SpawnBuildingAt("Building R");
+        SpawnBuilding2At("Building IF");
     }
 
     private void SpawnObjectAt(string name)
@@ -71,6 +80,30 @@ public class Chunk : MonoBehaviour
             Instantiate(apple, position, Quaternion.identity);
         }
 
+    }
+
+
+    private void SpawnStreetLightAt(string name)
+    {
+        Vector3 position = transform.Find(name).position;
+
+        /*
+        if (name == "streetLight LF" || name == "streetLight LM" || name == "streetLight LB")
+        {
+            ;
+        }
+        */
+        Instantiate(streetLight, position, (Quaternion.identity));
+    }
+    private void SpawnBuildingAt(string name)
+    {
+        Vector3 position = transform.Find(name).position;
+        Instantiate(building, position, Quaternion.identity);
+    }
+    private void SpawnBuilding2At(string name)
+    {
+        Vector3 position = transform.Find(name).position;
+        Instantiate(building, position, Quaternion.identity);
     }
 
 }

@@ -10,16 +10,16 @@ public class Environment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnStreetLightAt("streetLight RM");
+        SpawnStreetLightAt("streetLight LM");
+        SpawnBuildingAt("Building L");
+        SpawnBuildingAt("Building R");
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnStreetLightAt("streetLight RM");
-        SpawnStreetLightAt("streetLight LM");
-        SpawnBuildingAt("Building L");
-        SpawnBuildingAt("Building R");
+     
     }
 
     private void SpawnStreetLightAt(string name)

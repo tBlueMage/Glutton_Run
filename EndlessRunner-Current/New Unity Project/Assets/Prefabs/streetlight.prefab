@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5523599316657747928}
   m_LocalRotation: {x: -0.027411876, y: 0.7065753, z: 0.7065753, w: 0.027411876}
   m_LocalPosition: {x: 0.035274126, y: 2.675543e-35, z: -0.20100743}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1.5}
   m_Children: []
   m_Father: {fileID: 5523599316658039806}
   m_RootOrder: 0
@@ -102,13 +102,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5523599316657747930}
-  m_LocalRotation: {x: -0.03864611, y: -0.078607515, z: 0.9961516, w: -0.0030496106}
-  m_LocalPosition: {x: 0.03642584, y: 0.81423384, z: -0.2158285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.035984214, y: 0.22163698, z: 0.97435844, w: -0.014420936}
+  m_LocalPosition: {x: 0.088, y: 0.865, z: -0.919}
+  m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 5523599316658039806}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -25.523, y: -4.8640003, z: 182.79799}
 --- !u!33 &5523599316654648282
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -180,8 +180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5523599316657747932}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.018383674, y: 0.6915461, z: 0.033883844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.06995785, y: 0.87100005, z: -0.90099996}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 5523599316658039806}
   m_RootOrder: 2
@@ -241,7 +241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5523599316658039806}
   - component: {fileID: 2606227852151303845}
-  - component: {fileID: 5650704874552786842}
   m_Layer: 0
   m_Name: streetlight
   m_TagString: building
@@ -280,16 +279,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collidingMesh: {fileID: 5523599316657747934, guid: fd4e89b75139096469203c8a0c1f2a58,
     type: 3}
---- !u!65 &5650704874552786842
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5523599316657747934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
