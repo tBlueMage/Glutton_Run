@@ -14,6 +14,7 @@ public class Chunk : MonoBehaviour
     public GameObject musclePowder;
     public GameObject steelWall;
     public GameObject itemspawn;
+
     private int lane;
     private float wallOffset = 0;
     private int objectProbability;
@@ -22,11 +23,11 @@ public class Chunk : MonoBehaviour
 
     void Start()
     {
-   
-    
+
+
 
         lane = Random.Range(1, 4);
-        if(lane == 1)
+        if (lane == 1)
         {
             SpawnObjectAt("spawn1");
         }
@@ -47,13 +48,14 @@ public class Chunk : MonoBehaviour
         SpawnBuildingAt("Building R");
 
     }
-  
-    
+
+
     void SpawnObjectAt(string name)
     {
+  objectProbability = Random.Range(0, 100);
 
-        objectProbability = Random.Range(0,100);
 
+      
             if (objectProbability <= 5)
             {
                 Vector3 position = transform.Find(name).position;
@@ -93,9 +95,9 @@ public class Chunk : MonoBehaviour
                 Instantiate(apple, position, Quaternion.identity);
             }
 
+
+        
  
-
-
     }
     private void SpawnStreetLightAt(string name)
     {
