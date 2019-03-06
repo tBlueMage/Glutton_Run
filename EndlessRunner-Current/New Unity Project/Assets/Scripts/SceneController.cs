@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     public PlayerRun playerScript;
     private int colorCountDown = 30;
     public Text fartText;
+    private int currColor = 1;
 
     List<GameObject> chunks = new List<GameObject>();
     // Start is called before the first frame update
@@ -45,17 +46,34 @@ public class SceneController : MonoBehaviour
             chunks.Add(obj);
 
         }
-        scoreText.text = "Distance: " + playerScript.score;
+        scoreText.text = "Distance: " + (int)Mathf.Round((playerScript.score)/100) + " feet";
 
         if(playerScript.fartReady)
         {
             if(colorCountDown < 0)
             {
-                float randoR = Random.Range(0.0f, 1.0f);
-                float randoG = Random.Range(0.0f, 1.0f);
-                float randoB = Random.Range(0.0f, 1.0f);
 
-                Color randoColor = new Color(randoR, randoG, randoB);
+                Color randoColor;
+
+                
+                currColor++;
+
+                if(currColor > 3)
+                {
+                    currColor = 0;
+                }
+
+                if(currColor == 1)
+                {
+                    randoColor = new Color(0,1,1,1);
+                } else if (currColor == 2)
+                {
+                    randoColor = new Color(1, 1, 1, 1);
+                } else
+                {
+                    randoColor = new Color(1,0.92f,0.016f);
+                }
+
 
                 fartText.color = randoColor;
 
