@@ -290,7 +290,7 @@ MonoBehaviour:
     type: 3}
   itemspawn: {fileID: 7101747082058129476, guid: 51eb1121961d72f468e9e181a4d4c3f3,
     type: 3}
-  time: 1
+  difficulty: 1
 --- !u!1 &1884354343170126755
 GameObject:
   m_ObjectHideFlags: 0
