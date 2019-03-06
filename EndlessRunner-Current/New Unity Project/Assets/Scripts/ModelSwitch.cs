@@ -27,7 +27,8 @@ public class ModelSwitch : MonoBehaviour
             skinnyRunning.SetActive(false);
             strongRunning.SetActive(true);
             modelNumber = 2;
-            playerScript.speed = 9;
+            playerScript.speed = 12;
+            playerScript.jumpScale = 1;
             // print("Model 2 : Muscle");
         }
         else if (PlayerRun.fat > 600)
@@ -36,8 +37,9 @@ public class ModelSwitch : MonoBehaviour
             fatRunning.SetActive(false);
             skinnyRunning.SetActive(true);
             modelNumber = 3;
-            playerScript.speed = 12;
-           // print("Model 3 : Lean");
+            playerScript.speed = 9;
+            playerScript.jumpScale = 2;
+            // print("Model 3 : Lean");
         }
         else if (PlayerRun.fat < 0)
         {
@@ -45,7 +47,8 @@ public class ModelSwitch : MonoBehaviour
             strongRunning.SetActive(false);
             fatRunning.SetActive(true);
             modelNumber = 1;
-            playerScript.speed = 5;
+            playerScript.speed = 6;
+            playerScript.jumpScale = .75f;
            // print("Model 1 : Fat");
         }
     }
@@ -56,15 +59,12 @@ public class ModelSwitch : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             PlayerRun.fat -= 500;
-
         }
 
         if (Input.GetButtonDown("Fire2"))
         {
             PlayerRun.fat += 500;
         }
-
-        print(PlayerRun.fat);
 
         ModelChange();
     }

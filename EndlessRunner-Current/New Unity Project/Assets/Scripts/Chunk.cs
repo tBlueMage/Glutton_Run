@@ -40,7 +40,7 @@ public class Chunk : MonoBehaviour
         SpawnStreetLightAt("streetLight LM");
         SpawnBuildingAt("Building L");
         SpawnBuildingAt("Building R");
-        SpawnBuilding2At("Building IF");
+        //SpawnBuilding2At("Building IF");
     }
 
     private void SpawnObjectAt(string name)

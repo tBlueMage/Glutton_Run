@@ -10,6 +10,7 @@ public class PlayerRun : MonoBehaviour
     public float exponentialSpeed;
     public Vector3 jump;
     public float jumpForce;
+    public float jumpScale;
     public float shuffleMovement;
     private float pointOfTravel;
     private float travel;
@@ -38,7 +39,6 @@ public class PlayerRun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += speed;
         Movement();
         FatCalculation();
     }
@@ -67,7 +67,7 @@ public class PlayerRun : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump"))
             {
-                rb.velocity += Vector3.up * jumpForce;
+                rb.velocity += (Vector3.up * jumpForce * jumpScale);
                 isGrounded = false;
             }
         }
@@ -109,9 +109,9 @@ public class PlayerRun : MonoBehaviour
 
         Vector3 pos = transform.position;
 
+        exponentialSpeed += Time.deltaTime;
         pos.z += (speed + exponentialSpeed) * Time.deltaTime;
         transform.position = pos;
-        exponentialSpeed += Time.deltaTime;
 
         if (exponentialSpeed >= 10)
         {
