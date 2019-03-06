@@ -124,7 +124,10 @@ public class PlayerRun : MonoBehaviour
         {
             fat += (speed / 8);
         }
-
+        if(fartPowerActive)
+        {
+            fat += (speed / 4);
+        }
         if (fat > 1500)
         {
             fat = 1500;

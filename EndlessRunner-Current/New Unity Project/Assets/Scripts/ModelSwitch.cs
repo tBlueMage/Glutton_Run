@@ -21,25 +21,28 @@ public class ModelSwitch : MonoBehaviour
 
     void ModelChange()
     {
-        if (PlayerRun.fat > 0 && PlayerRun.fat < 600)
+        if (PlayerRun.fat >= 0 && PlayerRun.fat <= 600)
         {
             fatRunning.SetActive(false);
+            skinnyRunning.SetActive(false);
             strongRunning.SetActive(true);
             modelNumber = 2;
             playerScript.speed = 9;
             // print("Model 2 : Muscle");
         }
-        else if (PlayerRun.fat > 0)
+        else if (PlayerRun.fat > 600)
         {
             strongRunning.SetActive(false);
+            fatRunning.SetActive(false);
             skinnyRunning.SetActive(true);
             modelNumber = 3;
             playerScript.speed = 12;
            // print("Model 3 : Lean");
         }
-        else
+        else if (PlayerRun.fat < 0)
         {
             skinnyRunning.SetActive(false);
+            strongRunning.SetActive(false);
             fatRunning.SetActive(true);
             modelNumber = 1;
             playerScript.speed = 5;
@@ -60,7 +63,9 @@ public class ModelSwitch : MonoBehaviour
         {
             PlayerRun.fat += 500;
         }
-        
+
+        print(PlayerRun.fat);
+
         ModelChange();
     }
 }
