@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class titleToGamePlay : MonoBehaviour
+public class gameOverToTitle : MonoBehaviour
 {
-
+    private int cdTimer = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +15,11 @@ public class titleToGamePlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
+        cdTimer--;
+        
+        if(cdTimer<=0)
         {
-            SceneManager.LoadScene("EndlessRunner");
+            SceneManager.LoadScene("TitleScreen");
         }
     }
 }

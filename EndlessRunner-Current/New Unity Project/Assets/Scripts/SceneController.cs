@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerScript.fat<=-900)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
         if(chunks.Count > 0)
         {
             if (player.position.z - chunks[0].transform.position.z > 14)
