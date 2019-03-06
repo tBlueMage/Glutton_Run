@@ -43,15 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a59db4ebcae872489977018ffd69b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 10
   sideSpeed: 0
-  exponentialSpeed: 0
+  exponentialSpeed: 1
   jump: {x: 0, y: 0, z: 0}
   jumpForce: 0
   shuffleMovement: 0
   speedScale: 0
   fartPower: 0
-  score: 0
+  score: 500
   fartReady: 0
   fart: 0
   modelswitch: {fileID: 0}
