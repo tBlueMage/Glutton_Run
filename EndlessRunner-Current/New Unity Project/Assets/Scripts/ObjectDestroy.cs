@@ -36,12 +36,12 @@ public class ObjectDestroy : MonoBehaviour
             if(tag == "iceCream")
             {
                 Destroy(gameObject);
-                PlayerRun.fat -= 100;
+                PlayerRun.fat -= 50;
             }
             if(tag == "apple")
             {
                 Destroy(gameObject);
-                PlayerRun.fat += 30;
+                PlayerRun.fat += 20;
             }
             if(tag == "brickWall")
             {

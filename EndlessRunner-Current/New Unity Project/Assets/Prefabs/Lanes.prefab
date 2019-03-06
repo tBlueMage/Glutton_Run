@@ -288,6 +288,12 @@ MonoBehaviour:
     type: 3}
   steelWall: {fileID: 2912353851069940038, guid: 2182a2d39e4ebbd468770da938bc250b,
     type: 3}
+  itemspawn: {fileID: 7101747082058129476, guid: 51eb1121961d72f468e9e181a4d4c3f3,
+    type: 3}
+  ticker: 0
+  timer: 0
+  timertarget: 5
+  player: {fileID: 0}
 --- !u!1 &1884354343170126755
 GameObject:
   m_ObjectHideFlags: 0
