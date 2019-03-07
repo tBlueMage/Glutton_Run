@@ -68,6 +68,7 @@ public class PlayerRun : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 rb.velocity += (Vector3.up * jumpForce * jumpScale);
+                playJumpSound();
                 isGrounded = false;
             }
         }
@@ -91,6 +92,7 @@ public class PlayerRun : MonoBehaviour
 
             if (Input.GetKeyDown("f") && fartReady == true)
             {
+                FindObjectOfType<AudioManager>().Play("fart");
                 rb.velocity += Vector3.up * fartPower;
                 rb.velocity += Vector3.forward * fartPower;
                 fart = 0;
@@ -145,6 +147,21 @@ public class PlayerRun : MonoBehaviour
         else
         {
             fartReady = true;
+        }
+    }
+    private void playJumpSound()
+    {
+        if (ModelSwitch.modelNumber == 1)
+        {
+            FindObjectOfType<AudioManager>().Play("fatJump3");
+        }
+        if (ModelSwitch.modelNumber == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("strongJump1");
+        }
+        if (ModelSwitch.modelNumber == 3)
+        {
+            FindObjectOfType<AudioManager>().Play("skinnyJump1");
         }
     }
 }

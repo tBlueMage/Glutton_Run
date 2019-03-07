@@ -35,11 +35,13 @@ public class ObjectDestroy : MonoBehaviour
         {
             if(tag == "iceCream")
             {
+                FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
                 PlayerRun.fat -= 100;
             }
             if(tag == "apple")
             {
+                FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
                 PlayerRun.fat += 30;
             }
@@ -70,7 +72,8 @@ public class ObjectDestroy : MonoBehaviour
             if (tag == "musclePowder")
             {
                 GameObject player = GameObject.Find("Player");
-                if(PlayerRun.fat > 300)
+                FindObjectOfType<AudioManager>().Play("eating");
+                if (PlayerRun.fat > 300)
                 {
                     PlayerRun.fat -= 800;
                     if(PlayerRun.fat < 300)
