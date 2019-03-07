@@ -24,7 +24,7 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerScript.fat<=-900)
+        if(PlayerRun.fat<=-900 || PlayerRun.fat>=1500)
         {
             SceneManager.LoadScene("GameOver");
         }

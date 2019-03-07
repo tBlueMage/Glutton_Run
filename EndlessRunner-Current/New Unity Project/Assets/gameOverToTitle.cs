@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class gameOverToTitle : MonoBehaviour
 {
-    private int cdTimer = 30;
+    private int cdTimer = 60;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

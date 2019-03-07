@@ -33,6 +33,7 @@ public class PlayerRun : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        fat = 0;
     }
 
     // Update is called once per frame
