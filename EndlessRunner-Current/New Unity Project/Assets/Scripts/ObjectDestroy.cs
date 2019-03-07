@@ -37,13 +37,13 @@ public class ObjectDestroy : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
-                PlayerRun.fat -= 100;
+                PlayerRun.fat -= 50;
             }
             if(tag == "apple")
             {
                 FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
-                PlayerRun.fat += 30;
+                PlayerRun.fat += 20;
             }
             if(tag == "brickWall")
             {

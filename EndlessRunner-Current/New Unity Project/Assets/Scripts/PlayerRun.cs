@@ -23,6 +23,7 @@ public class PlayerRun : MonoBehaviour
     public int fartPower;
     public int score = 0;
     public static int fat;
+  
     public bool fartReady = false;
     public float fart;
     public ModelSwitch modelswitch;
@@ -41,6 +42,7 @@ public class PlayerRun : MonoBehaviour
     {
         Movement();
         FatCalculation();
+      
     }
 
     private void OnCollisionEnter(Collision collision)
