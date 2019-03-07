@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7194144266174267489}
   - component: {fileID: 2799569309154831417}
+  - component: {fileID: 3670065798156837039}
   m_Layer: 0
   m_Name: garbagebags
   m_TagString: garbageBags
@@ -56,6 +57,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidingMesh: {fileID: 7194144266174372929}
+--- !u!65 &3670065798156837039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194144266174372929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38949144, y: 1, z: 0.9382813}
+  m_Center: {x: 0.30525434, y: 0, z: 0.26350203}
 --- !u!1 &7194144266174372931
 GameObject:
   m_ObjectHideFlags: 0

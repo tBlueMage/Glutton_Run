@@ -193,6 +193,164 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10279356}
   m_CullTransparentMesh: 0
+--- !u!1 &65439815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65439817}
+  - component: {fileID: 65439816}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &65439816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65439815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f007fdac22ee94bb63f36b96a7e45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: fart
+    clip: {fileID: 8300000, guid: aae328c7193491e448c1d02ec8e326dc, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: fatHurt1
+    clip: {fileID: 8300000, guid: b4cbedb24a12eaa48b0255c4af5848a0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fatHurt2
+    clip: {fileID: 8300000, guid: d4e4d8c4947fc3b4d858afc7c9338369, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fatHurt3
+    clip: {fileID: 8300000, guid: fbd0678221c1ed04f89538fff53502dd, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fatJump1
+    clip: {fileID: 8300000, guid: 9be93ed212fe063489043aef2ca03648, type: 3}
+    volume: 0.3
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: fatJump2
+    clip: {fileID: 8300000, guid: 5779681a05fefac49b73d3fa0ac0a82f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fatJump3
+    clip: {fileID: 8300000, guid: 4ab470b48dfec2b45a354912dbf8afb0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyHurt1
+    clip: {fileID: 8300000, guid: 7d51e0945d42b6049a8af46a4497819b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyHurt2
+    clip: {fileID: 8300000, guid: 3612ef6bc36d94f49bb449ff58394533, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyHurt3
+    clip: {fileID: 8300000, guid: 84b9fc48ad47d9a4f816b54e8a161336, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyJump1
+    clip: {fileID: 8300000, guid: fb21ff1de3447b544bbde04476838a86, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyJump2
+    clip: {fileID: 8300000, guid: bbdacc1c3310bd640a8df49581e8f375, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: skinnyJump3
+    clip: {fileID: 8300000, guid: 7fefe662eced3664b9d11986b9c70d6f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongHurt1
+    clip: {fileID: 8300000, guid: 3eac5dfe01ebbf24098ed905cd8cfa5c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongHurt2
+    clip: {fileID: 8300000, guid: 2c00d1e789c53864c9ee71f37edc9723, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongHurt3
+    clip: {fileID: 8300000, guid: 6d646bf467f0b9a41ad267b8e1c7c4a7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongJump1
+    clip: {fileID: 8300000, guid: 3a5966cb2ea7b7340ba8bb94da81a168, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongJump2
+    clip: {fileID: 8300000, guid: f033d659b378265469ff6eaf0f2e75a2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: strongJump3
+    clip: {fileID: 8300000, guid: bd82f617185541445bdb7675990619f8, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &65439817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65439815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &69291961
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +1029,7 @@ MonoBehaviour:
   exponentialSpeed: 0
   jump: {x: 0, y: 0, z: 0}
   jumpForce: 5
+  jumpScale: 0
   shuffleMovement: 1
   speedScale: 0
   fartPower: 25

@@ -47,7 +47,7 @@ public class ObjectDestroy : MonoBehaviour
             {
                 GameObject player = GameObject.Find("Player");
                 PlayerRun playerRun = player.GetComponent<PlayerRun>();
-                
+                playImpactSound();
                 playerRun.exponentialSpeed *= .5f;
                 Destroy(gameObject);
             }
@@ -55,7 +55,15 @@ public class ObjectDestroy : MonoBehaviour
             {
                 GameObject player = GameObject.Find("Player");
                 PlayerRun playerRun = player.GetComponent<PlayerRun>();
-                print("ye");
+                playImpactSound();
+                playerRun.exponentialSpeed = 0;
+                Destroy(gameObject);
+            }
+            if (tag == "garbageBags")
+            {
+                GameObject player = GameObject.Find("Player");
+                PlayerRun playerRun = player.GetComponent<PlayerRun>();
+                playImpactSound();
                 playerRun.exponentialSpeed = 0;
                 Destroy(gameObject);
             }
@@ -80,6 +88,22 @@ public class ObjectDestroy : MonoBehaviour
                 }
                 Destroy(gameObject);
             }
+        }
+    }
+
+    private void playImpactSound()
+    {
+        if (ModelSwitch.modelNumber == 1)
+        {
+            FindObjectOfType<AudioManager>().Play("fatHurt2");
+        }
+        if (ModelSwitch.modelNumber == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("strongHurt3");
+        }
+        if (ModelSwitch.modelNumber == 3)
+        {
+            FindObjectOfType<AudioManager>().Play("skinnyHurt3");
         }
     }
 }
