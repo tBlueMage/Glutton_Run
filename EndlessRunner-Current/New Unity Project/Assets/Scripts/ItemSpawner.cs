@@ -14,18 +14,10 @@ public class ItemSpawner : MonoBehaviour
     void Start()
     {
             SpawnObjectAt("item1");
-      
-
             SpawnObjectAt("item2");
-   
-
             SpawnObjectAt("item3");
             SpawnObjectAt("item4");
             SpawnObjectAt("item5");
-        
-
-
-
     }
 
     // Update is called once per frame

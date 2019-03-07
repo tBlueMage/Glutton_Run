@@ -37,7 +37,7 @@ public class SceneController : MonoBehaviour
             }
         }
 
-        while (chunks.Count < 5)
+        while (chunks.Count < 20)
         {
             // spawn a new chunk
             Vector3 position = Vector3.zero;

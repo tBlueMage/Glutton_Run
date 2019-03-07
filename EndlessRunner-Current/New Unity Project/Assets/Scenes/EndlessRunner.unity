@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 10279357}
   - component: {fileID: 10279359}
   - component: {fileID: 10279358}
-  - component: {fileID: 10279360}
   m_Layer: 5
   m_Name: Fart Ready
   m_TagString: Untagged
@@ -274,7 +273,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 64e6c8d0d7a57d748bad233eb94de526, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -290,7 +289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &69291961
 GameObject:

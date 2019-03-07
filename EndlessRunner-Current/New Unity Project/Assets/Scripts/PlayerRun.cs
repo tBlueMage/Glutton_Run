@@ -43,7 +43,6 @@ public class PlayerRun : MonoBehaviour
     {
         Movement();
         FatCalculation();
-      
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -65,6 +64,7 @@ public class PlayerRun : MonoBehaviour
     }
     void Movement()
     {
+        score += speed;
         float moveVertical = Input.GetAxis("Vertical");
         if (isGrounded)
         {
@@ -133,18 +133,9 @@ public class PlayerRun : MonoBehaviour
         {
             fat += (speed / 4);
         }
-        if (fat > 1500)
-        {
-            fat = 1500;
-        }
-
-        if (fat < -900)
-        {
-            fat = -900;
-        }
         if (fart < 1)
         {
-            fart += .001f;
+            //fart += .001f;
             fartReady = false;
         }
         else

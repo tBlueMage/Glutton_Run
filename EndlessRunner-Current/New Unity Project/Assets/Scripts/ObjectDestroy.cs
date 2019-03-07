@@ -14,9 +14,10 @@ public class ObjectDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        counter -= Time.deltaTime;
+        GameObject player = GameObject.Find("Player");
+        Transform playerPos = player.GetComponent<Transform>();
 
-        if(counter <= 0)
+        if (playerPos.position.z - transform.position.z > 14)
         {
             Destroy(gameObject);
         }
@@ -33,49 +34,63 @@ public class ObjectDestroy : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if(tag == "iceCream")
+            GameObject player = GameObject.Find("Player");
+            PlayerRun playerRun = player.GetComponent<PlayerRun>();
+            ModelSwitch modelSwitch = player.GetComponent<ModelSwitch>();
+            if (tag == "iceCream")
             {
                 FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
-                PlayerRun.fat -= 50;
+                playerRun.fart += .1f;
+                PlayerRun.fat -= 200;
             }
             if(tag == "apple")
             {
                 FindObjectOfType<AudioManager>().Play("eating");
                 Destroy(gameObject);
-                PlayerRun.fat += 20;
+                playerRun.fart += .1f;
+                PlayerRun.fat += 40;
             }
             if(tag == "brickWall")
             {
-                GameObject player = GameObject.Find("Player");
-                PlayerRun playerRun = player.GetComponent<PlayerRun>();
+
                 playImpactSound();
-                playerRun.exponentialSpeed *= .5f;
+                if(ModelSwitch.modelNumber != 1)
+                {
+                    playerRun.exponentialSpeed *= .5f;
+                }
+                PlayerRun.fat -= 500;
                 Destroy(gameObject);
             }
             if (tag == "steelWall")
             {
-                GameObject player = GameObject.Find("Player");
-                PlayerRun playerRun = player.GetComponent<PlayerRun>();
+
                 playImpactSound();
-                playerRun.exponentialSpeed = 0;
+                if (ModelSwitch.modelNumber != 1)
+                {
+                    playerRun.exponentialSpeed = 0f;
+                }
+                PlayerRun.fat -= 500;
                 Destroy(gameObject);
             }
             if (tag == "garbageBags")
             {
-                GameObject player = GameObject.Find("Player");
-                PlayerRun playerRun = player.GetComponent<PlayerRun>();
+
                 playImpactSound();
-                playerRun.exponentialSpeed = 0;
+                if (ModelSwitch.modelNumber != 1)
+                {
+                    playerRun.exponentialSpeed = 0f;
+                }
+                PlayerRun.fat -= 500;
                 Destroy(gameObject);
             }
             if (tag == "musclePowder")
             {
-                GameObject player = GameObject.Find("Player");
+                playerRun.fart += .1f;
                 FindObjectOfType<AudioManager>().Play("eating");
                 if (PlayerRun.fat > 300)
                 {
-                    PlayerRun.fat -= 800;
+                    PlayerRun.fat -= 500;
                     if(PlayerRun.fat < 300)
                     {
                         PlayerRun.fat = 300;
@@ -83,7 +98,7 @@ public class ObjectDestroy : MonoBehaviour
                 }
                 if (PlayerRun.fat < 300)
                 {
-                    PlayerRun.fat += 800;
+                    PlayerRun.fat += 500;
                     if (PlayerRun.fat > 300)
                     {
                         PlayerRun.fat = 300;
